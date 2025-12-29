@@ -1,0 +1,166 @@
+:root{
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #0ea5a4;
+  --text: #0f172a;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.site-header{padding:18px 0;background:var(--bg)}
+.header-inner{display:flex;align-items:center}
+.brand{display:flex;gap:12px;align-items:center}
+.brand-logo{width:80px;height:80px;object-fit:contain}
+.brand-title{margin:0;font-size:1.6rem}
+.brand-sub{margin:4px 0 0;color:var(--muted)}
+
+/* Slideshow - full width */
+/* --- slideshow styles (replace existing slideshow block) --- */
+
+/* make slideshow take a significant portion of viewport */
+.slideshow-wrap { width: 100%; background: #fff; }
+.slideshow-inner {
+  position: relative;
+  width: 100%;
+  /* large height so full image displays: 80vh (80% of viewport height), capped to avoid extreme sizes */
+  height: min(80vh, 900px);
+  overflow: hidden;
+}
+
+/* each slide centers the media and uses flexbox so the full image/video is visible (no cropping) */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .55s ease, transform .55s ease;
+  transform: scale(1.01);
+  background: #fff; /* white background for letterboxing */
+}
+
+/* active slide visible */
+.slide.active { opacity: 1; transform: scale(1); }
+
+/* image/video sizing:
+   - contain the media inside the slide so the entire image is visible
+   - allow width or height to scale (maintaining aspect) without overflowing */
+.slide img, .slide video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* manual nav buttons (ensure visible on top) */
+.sl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 60;
+  user-select: none;
+}
+.sl-nav.prev { left: 12px; }
+.sl-nav.next { right: 12px; }
+
+/* dots */
+.sl-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 60;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  border: 0;
+  cursor: pointer;
+}
+.dot.on { background: var(--accent); }
+
+/* description */
+.description{padding:28px 16px}
+.description h2{margin-top:0}
+
+/* Contact cards — paste into src/styles/global.css */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.contact-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(2,6,23,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.10);
+}
+
+.contact-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.contact-card p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.contact-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer{padding:18px 0;background:#fff;border-top:1px solid #eef2f7}
+.site-footer small{color:var(--muted)}
+
+/* smaller screens */
+@media (max-width: 900px) {
+  .slideshow-inner { height: min(60vh, 520px); }
+  .sl-nav { padding: 8px 10px; font-size: 18px; }
+}
+
+
+/* small helper */
+.muted{color:var(--muted)}
+
