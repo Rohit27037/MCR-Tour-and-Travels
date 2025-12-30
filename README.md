@@ -1,16 +1,26 @@
-# React + Vite
+# MCR Tour & Travels
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MCR Tour & Travels is the official single-page website for a coach/transport firm.
+This repository contains the static frontend that presents the company brand, a full-width slideshow (images + videos), a short company description, manager contact cards and a footer with company contact + location.
 
-Currently, two official plugins are available:
+This README focuses on what the project is, how the site works, and how you can edit content / publish it. (It intentionally does not go into low-level tooling details.)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+What the site shows (user facing)
 
-## React Compiler
+Header with company logo and name: MCR Tour & Travels.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Full-width slideshow that occupies a large portion of the top of the page:
 
-## Expanding the ESLint configuration
+Supports both images and videos.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Images automatically advance every 3 seconds.
+
+Videos play for their own duration; once a video ends the slideshow advances automatically.
+
+Manual controls (prev / next buttons and dots) are available so visitors can step through slides.
+
+About section: short description of the firm and a concise list of available vehicle types and services.
+
+Contact / Managers: cards with manager names and telephone/email links (tap to call on mobile).
+
+Footer: company email and location (clickable link opens Google Maps), copyright notice.
