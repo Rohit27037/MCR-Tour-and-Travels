@@ -9,7 +9,7 @@ return (
 <img src="assets/images/logo.png" alt="MCR Tour & Travels" className="brand-logo" />
 <div>
 <h1 className="brand-title">MCR Tour & Travels</h1>
-<p className="brand-sub">Book buses by capacity — weddings, tours, and local services</p>
+<p className="brand-sub">Your Journey, Our Responsibility</p>
 </div>
 </div>
 </div>
