@@ -22,8 +22,6 @@ export default function Contacts(){
         <div className="contact-card">
           <h3>Dev Pratap Singh</h3>
           <p>Phone: <a href="tel:9918644224">9918644224</a></p>
-          <p>Email: <a href="mailto:dev@example.com">dev@example.com</a></p>
-          <p>Location: <a href={mapsUrl} target="_blank" rel="noreferrer">View on map</a></p>
         </div>
       </div>
     </section>
