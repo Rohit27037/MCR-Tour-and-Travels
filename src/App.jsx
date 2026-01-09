@@ -26,9 +26,9 @@ export default function App() {
           <h3>Our available vehicle types and services include</h3>
           <ul>
             <li>2×2 sitting sleeper AC</li>
-            <li>3×2 full sleeper AC</li>
+            <li>2×2 full sleeper AC</li>
             <li>3×2 sitting non-AC</li>
-            <li>3×2 full sleeper AC</li>
+            <li>2×2 full sleeper non-AC</li>
             <li>10-seater mini bus for local service</li>
             <li>Mini buses for local travelers</li>
             <li>Coaches for wedding purposes</li>
